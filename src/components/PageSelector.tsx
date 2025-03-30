@@ -1,5 +1,7 @@
 import usePageSelect from "../hooks/usePageSelect";
 import PageCheckbox from "./PageCheckbox";
+import Button from "./ui/Button";
+import Label from "./ui/Label";
 
 const PageSelector = () => {
   const pages: string[] = ["Page 1", "Page 2", "Page 3", "Page 4"];
@@ -12,25 +14,14 @@ const PageSelector = () => {
         className="flex justify-between items-center border-b pb-2 border-[#CDCDCD] cursor-pointer group"
         onClick={handleSelectAll}
       >
-        <label className="font-montserrat text-custom-black">All pages</label>
-
-        <label className="relative">
-          <input
-            type="checkbox"
-            checked={selectAll}
-            readOnly
-            onClick={handleSelectAll}
-            className="peer hidden"
-          />
-          <div
-            className="w-[23px] h-[23px] border border-gray-300 rounded-sm flex items-center justify-center
-              group-hover:border-gray-600
-              peer-checked:bg-blue-500 peer-checked:border-blue-500
-              group-hover:after:content-['✓'] group-hover:after:text-gray-300 
-              peer-checked:after:content-['✓'] peer-checked:after:text-white
-              after:text-[20px] after:font-bold"
-          />
-        </label>
+        <Label text="All Pages" className="font-montserrat text-custom-black" />
+        <input
+          type="checkbox"
+          checked={selectAll}
+          readOnly
+          className="peer hidden"
+        />
+        <div className="custom-checkbox" />
       </div>
 
       <div className="my-4 border-b pb-2 border-[#CDCDCD]">
@@ -45,9 +36,10 @@ const PageSelector = () => {
       </div>
 
       <div className="flex justify-center">
-        <button className="w-[340px] h-[40px] font-montserrat bg-[#FFCE22] text-custom-black rounded-md hover:bg-yellow-200">
-          Done
-        </button>
+        <Button
+          text="Done"
+          className="w-[340px] h-[40px] font-montserrat bg-[#FFCE22] text-custom-black rounded-md hover:bg-yellow-200"
+        />
       </div>
     </div>
   );
