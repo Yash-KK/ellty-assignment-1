@@ -3,7 +3,7 @@ import PageSelector from "./components/PageSelector";
 
 function App() {
   return (
-    <div className="flex p-20">
+    <div className="flex h-screen justify-center items-center">
       <PageSelector />
     </div>
   );

@@ -2,5 +2,14 @@
 @import "tailwindcss";
 @theme {
   --font-montserrat: "Montserrat", sans-serif; 
-  --color-custom-black: #1F2128; 
+  --color-custom-black: #1F2128;
+}
+
+.custom-checkbox {
+  @apply w-[23px] h-[23px] border border-gray-300 rounded-sm flex items-center justify-center
+         group-hover:border-gray-600
+         peer-checked:bg-blue-500 peer-checked:border-blue-500
+         group-hover:after:content-['✓'] group-hover:after:text-gray-300
+         peer-checked:after:content-['✓'] peer-checked:after:text-white
+         after:text-[20px] after:font-bold;
 }
