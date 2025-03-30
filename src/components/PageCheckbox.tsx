@@ -1,3 +1,5 @@
+import Label from "./ui/Label";
+
 interface PageCheckboxProps {
   label: string;
   checked: boolean;
@@ -9,9 +11,8 @@ const PageCheckbox = ({ label, checked, onClick }: PageCheckboxProps) => (
     className="flex justify-between items-center py-2 cursor-pointer group"
     onClick={onClick}
   >
-    <span className="font-montserrat text-custom-black">{label}</span>
-
-    <label className="relative">
+    <Label className="font-montserrat text-custom-black" text={label} />
+    <label className="relative cursor-pointer">
       <input
         type="checkbox"
         checked={checked}
