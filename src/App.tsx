@@ -1,12 +1,11 @@
 import "./App.css";
+import PageSelector from "./components/PageSelector";
 
 function App() {
   return (
-    <>
-      <div className="flex justify-center items-center h-screen bg-gray-200 text-4xl font-bold ">
-        Inital Setup
-      </div>
-    </>
+    <div className="flex p-20">
+      <PageSelector />
+    </div>
   );
 }
 
